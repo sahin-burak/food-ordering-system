@@ -1,4 +1,3 @@
 package com.food.ordering.system.domain.valueobject;
 
-public class PaymentStatus {
-}
+public class PaymentStatus {}
