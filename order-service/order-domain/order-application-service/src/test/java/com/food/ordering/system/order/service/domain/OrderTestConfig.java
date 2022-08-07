@@ -6,42 +6,43 @@ import com.food.ordering.system.order.service.domain.ports.output.message.publis
 import com.food.ordering.system.order.service.domain.ports.output.repository.CustomerRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.OrderRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.RestaurantRepository;
-import org.mockito.Mockito;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import static org.mockito.Mockito.mock;
 
 @SpringBootApplication(scanBasePackages = "com.food.ordering.system")
 public class OrderTestConfig {
 
   @Bean
   public OrderCreatedPaymentRequestMessagePublisher orderCreatedPaymentRequestMessagePublisher() {
-    return Mockito.mock(OrderCreatedPaymentRequestMessagePublisher.class);
+    return mock(OrderCreatedPaymentRequestMessagePublisher.class);
   }
 
   @Bean
   public OrderCancelledPaymentRequestMessagePublisher
       orderCancelledPaymentRequestMessagePublisher() {
-    return Mockito.mock(OrderCancelledPaymentRequestMessagePublisher.class);
+    return mock(OrderCancelledPaymentRequestMessagePublisher.class);
   }
 
   @Bean
   public OrderPaidRestaurantRequestMessagePublisher orderPaidRestaurantRequestMessagePublisher() {
-    return Mockito.mock(OrderPaidRestaurantRequestMessagePublisher.class);
+    return mock(OrderPaidRestaurantRequestMessagePublisher.class);
   }
 
   @Bean
   public OrderRepository orderRepository() {
-    return Mockito.mock(OrderRepository.class);
+    return mock(OrderRepository.class);
   }
 
   @Bean
   public CustomerRepository customerRepository() {
-    return Mockito.mock(CustomerRepository.class);
+    return mock(CustomerRepository.class);
   }
 
   @Bean
   public RestaurantRepository restaurantRepository() {
-    return Mockito.mock(RestaurantRepository.class);
+    return mock(RestaurantRepository.class);
   }
 
   @Bean
