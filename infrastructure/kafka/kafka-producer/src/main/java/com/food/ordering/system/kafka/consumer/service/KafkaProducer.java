@@ -1,4 +1,4 @@
-package com.food.ordering.system.kafka.producer.service;
+package com.food.ordering.system.kafka.consumer.service;
 
 import java.io.Serializable;
 import org.apache.avro.specific.SpecificRecordBase;

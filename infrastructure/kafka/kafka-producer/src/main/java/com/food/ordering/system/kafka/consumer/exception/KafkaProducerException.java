@@ -1,4 +1,4 @@
-package com.food.ordering.system.kafka.producer.exception;
+package com.food.ordering.system.kafka.consumer.exception;
 
 public class KafkaProducerException extends RuntimeException {
 

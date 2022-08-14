@@ -1,7 +1,7 @@
-package com.food.ordering.system.kafka.producer.service.impl;
+package com.food.ordering.system.kafka.consumer.service.impl;
 
-import com.food.ordering.system.kafka.producer.exception.KafkaProducerException;
-import com.food.ordering.system.kafka.producer.service.KafkaProducer;
+import com.food.ordering.system.kafka.consumer.exception.KafkaProducerException;
+import com.food.ordering.system.kafka.consumer.service.KafkaProducer;
 import java.io.Serializable;
 import javax.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;

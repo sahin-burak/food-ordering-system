@@ -1,4 +1,4 @@
-package com.food.ordering.system.kafka.producer;
+package com.food.ordering.system.kafka.consumer;
 
 import com.food.ordering.system.kafka.config.data.KafkaConfigData;
 import com.food.ordering.system.kafka.config.data.KafkaProducerConfigData;
