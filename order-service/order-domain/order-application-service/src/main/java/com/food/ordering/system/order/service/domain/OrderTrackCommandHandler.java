@@ -25,6 +25,7 @@ public class OrderTrackCommandHandler {
   public TrackOrderResponse trackOrder(TrackOrderQuery trackOrderQuery) {
     Optional<Order> orderResult =
         orderRepository.findByTrackingId(new TrackingId(trackOrderQuery.getOrderTrackingId()));
+
     if (orderResult.isEmpty()) {
       String msg =
           String.format(

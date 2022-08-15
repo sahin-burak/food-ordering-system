@@ -44,6 +44,7 @@ public class OrderCreateHelper {
     Restaurant restaurant = orderDataMapper.createOrderCommandToRestaurant(createOrderCommand);
     Optional<Restaurant> optionalRestaurant =
         restaurantRepository.findRestaurantInformation(restaurant);
+
     if (optionalRestaurant.isEmpty()) {
       String msg =
           String.format(
@@ -57,6 +58,7 @@ public class OrderCreateHelper {
 
   private void checkCustomer(UUID customerId) {
     Optional<Customer> customer = customerRepository.findCustomer(customerId);
+
     if (customer.isEmpty()) {
       String msg = String.format("Could not find customer with customer id: %s", customerId);
       log.warn(msg);
@@ -66,6 +68,7 @@ public class OrderCreateHelper {
 
   private Order saveOrder(Order order) {
     Order orderResult = orderRepository.save(order);
+
     if (orderResult == null) {
       throw new OrderDomainException("Could not save order!");
     }
