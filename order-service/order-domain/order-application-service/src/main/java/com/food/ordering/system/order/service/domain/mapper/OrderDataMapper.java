@@ -76,7 +76,7 @@ public class OrderDataMapper {
     return StreetAddress.builder()
         .id(UUID.randomUUID())
         .street(orderAddress.getStreet())
-        .postCode(orderAddress.getPostalCode())
+        .postalCode(orderAddress.getPostalCode())
         .city(orderAddress.getCity())
         .build();
   }

@@ -15,8 +15,10 @@ import java.util.UUID;
 
 public class Order extends AggregateRoot<OrderId> {
 
+  public static final String FAILURE_MESSAGE_DELIMITER = ";";
+
   private final CustomerId customerId;
-  private final RestaurantId restaurantid;
+  private final RestaurantId restaurantId;
   private final StreetAddress deliveryAddress;
   private final Money price;
   private final List<OrderItem> items;
@@ -131,7 +133,7 @@ public class Order extends AggregateRoot<OrderId> {
   private Order(Builder builder) {
     super.setId(builder.orderId);
     customerId = builder.customerId;
-    restaurantid = builder.restaurantId;
+    restaurantId = builder.restaurantId;
     deliveryAddress = builder.streetAddress;
     price = builder.price;
     items = builder.items;
@@ -148,8 +150,8 @@ public class Order extends AggregateRoot<OrderId> {
     return customerId;
   }
 
-  public RestaurantId getRestaurantid() {
-    return restaurantid;
+  public RestaurantId getRestaurantId() {
+    return restaurantId;
   }
 
   public StreetAddress getDeliveryAddress() {

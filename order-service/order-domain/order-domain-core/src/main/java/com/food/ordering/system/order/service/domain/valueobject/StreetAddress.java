@@ -14,6 +14,6 @@ public class StreetAddress {
 
   private final UUID id;
   private final String street;
-  private final String postCode;
+  private final String postalCode;
   private final String city;
 }
