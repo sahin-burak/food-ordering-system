@@ -2,13 +2,10 @@ package com.food.ordering.system.domain.event;
 
 public final class EmptyEvent implements DomainEvent<Void> {
 
-    public static final EmptyEvent INSTANCE = new EmptyEvent();
+  public static final EmptyEvent INSTANCE = new EmptyEvent();
 
-    private EmptyEvent() {
-    }
+  private EmptyEvent() {}
 
-    @Override
-    public void fire() {
-
-    }
+  @Override
+  public void fire() {}
 }

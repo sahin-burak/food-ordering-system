@@ -1,12 +1,11 @@
 package com.food.ordering.system.payment.service.dataaccess.credithistory.entity;
 
 import com.food.ordering.system.payment.service.domain.valueobject.TransactionType;
-import lombok.*;
-
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
+import javax.persistence.*;
+import lombok.*;
 
 @Getter
 @Setter
@@ -17,23 +16,23 @@ import java.util.UUID;
 @Entity
 public class CreditHistoryEntity {
 
-    @Id
-    private UUID id;
-    private UUID customerId;
-    private BigDecimal amount;
-    @Enumerated(EnumType.STRING)
-    private TransactionType type;
+  @Id private UUID id;
+  private UUID customerId;
+  private BigDecimal amount;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CreditHistoryEntity that = (CreditHistoryEntity) o;
-        return id.equals(that.id);
-    }
+  @Enumerated(EnumType.STRING)
+  private TransactionType type;
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    CreditHistoryEntity that = (CreditHistoryEntity) o;
+    return id.equals(that.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
+  }
 }
